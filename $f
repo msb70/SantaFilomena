@@ -1,0 +1,1 @@
+import React from 'react'; export default function $f() { return <div className='page-content'><h1>$f</h1></div>; }

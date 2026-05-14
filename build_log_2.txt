@@ -1,0 +1,14 @@
+
+> santa-filomena@0.0.0 build
+> vite build
+
+vite v8.0.12 building client environment for production...
+[2Ktransforming...✓ 1756 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                        0.79 kB │ gzip:  0.44 kB
+dist/assets/hacienda_colonial_facade-DvkKfyx1.png  1,134.79 kB
+dist/assets/index-C4wEeAJ6.css                        16.03 kB │ gzip:  3.82 kB
+dist/assets/index-hi9JuoKs.js                        261.30 kB │ gzip: 82.90 kB
+
+✓ built in 370ms

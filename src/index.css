@@ -1,0 +1,96 @@
+:root {
+  /* Paleta de Colores - Hacienda Santa Filomena */
+  --cafe-colonial: #5B3A29;
+  --verde-montana: #2F5B2F;
+  --crema-calido: #F2E8D5;
+  --terracota-suave: #A65F3D;
+  --blanco-limpio: #FFFFFF;
+  --texto-oscuro: #2C2C2C;
+  --texto-claro: #F9F9F9;
+  
+  /* Tipografía */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-accent: 'Outfit', sans-serif;
+
+  /* Sombras y Bordes */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --border-radius: 12px;
+  
+  /* Transiciones */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--crema-calido);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-accent);
+  color: var(--cafe-colonial);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-smooth);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  transition: var(--transition-smooth);
+}
+
+/* Utilidades de Diseño Premium */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary {
+  background-color: var(--verde-montana);
+  color: var(--blanco-limpio);
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background-color: var(--cafe-colonial);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Micro-animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
