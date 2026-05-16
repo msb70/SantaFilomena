@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap');
+
 :root {
   /* Paleta de Colores - Hacienda Santa Filomena */
   --cafe-colonial: #5B3A29;
@@ -54,6 +56,15 @@ button {
   transition: var(--transition-smooth);
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(166, 95, 61, 0.45);
+  outline-offset: 3px;
+}
+
 /* Utilidades de Diseño Premium */
 .glass {
   background: rgba(255, 255, 255, 0.7);
@@ -79,10 +90,61 @@ button {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
+.btn-outline {
+  align-items: center;
+  border: 2px solid currentColor;
+  border-radius: var(--border-radius);
+  color: var(--blanco-limpio);
+  display: inline-flex;
+  font-weight: 700;
+  gap: 8px;
+  justify-content: center;
+  padding: 12px 24px;
+}
+
+.btn-outline:hover {
+  background: var(--blanco-limpio);
+  color: var(--cafe-colonial);
+  transform: translateY(-2px);
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-100 {
+  justify-content: center;
+  width: 100%;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.shadow {
+  box-shadow: var(--shadow-soft);
 }
 
 /* Micro-animaciones */

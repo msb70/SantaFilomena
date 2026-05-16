@@ -1,5 +1,7 @@
 .coffee-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=1600');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/gallery/03-cosecha-cafe.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .grid-2 {
@@ -77,8 +79,61 @@
   margin-bottom: 20px;
 }
 
+.visit-booking {
+  scroll-margin-top: 90px;
+}
+
+.visit-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.visit-layout p {
+  color: #5d554d;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.visit-form {
+  background: var(--blanco-limpio);
+  border-radius: 8px;
+  padding: 34px;
+}
+
+.visit-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.visit-form .form-group {
+  margin-bottom: 18px;
+}
+
+.visit-form label {
+  color: var(--texto-oscuro);
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.visit-form input,
+.visit-form select,
+.visit-form textarea {
+  border: 1px solid #ded6cc;
+  border-radius: 8px;
+  font: inherit;
+  padding: 12px 14px;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
-  .grid-2 {
+  .grid-2,
+  .visit-layout,
+  .visit-form .form-row {
     grid-template-columns: 1fr;
   }
 }

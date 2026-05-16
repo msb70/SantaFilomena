@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Coffee, Home as HomeIcon, MapPin, Star } from 'lucide-react';
+import PhotoCarousel from '../components/PhotoCarousel';
+import { galleryPhotos } from '../data/galleryPhotos';
 import './Home.css';
 
 const Home = () => {
@@ -8,19 +10,19 @@ const Home = () => {
       title: 'Alojamiento Real',
       desc: 'Habitaciones coloniales con vistas a las montañas y el aroma del café fresco.',
       icon: <HomeIcon size={24} />,
-      img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800',
+      img: '/gallery/16-patio-central.png',
     },
     {
       title: 'Ruta del Café',
       desc: 'Descubre el proceso artesanal desde la semilla hasta la taza en nuestras plantaciones.',
       icon: <Coffee size={24} />,
-      img: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800',
+      img: '/gallery/03-cosecha-cafe.png',
     },
     {
       title: 'Eventos Exclusivos',
       desc: 'El escenario perfecto para bodas y celebraciones rodeados de naturaleza.',
       icon: <Star size={24} />,
-      img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=800',
+      img: '/gallery/10-patio-nocturno.png',
     }
   ];
 
@@ -30,7 +32,7 @@ const Home = () => {
       <section className="hero">
         <div className="hero-overlay"></div>
         <div className="container hero-content fade-in">
-          <span className="hero-tag">Tradición desde 1920</span>
+          <span className="hero-tag">Tradición desde 1885</span>
           <h1>Donde la Historia se Mezcla con el Aroma del Café</h1>
           <p>Vive una experiencia colonial auténtica en el corazón de los Andes.</p>
           <div className="hero-btns">
@@ -44,16 +46,18 @@ const Home = () => {
       <section className="story section-padding">
         <div className="container story-grid">
           <div className="story-image">
-            <img src="https://images.unsplash.com/photo-1518113171953-20992f3467bd?auto=format&fit=crop&q=80&w=800" alt="Hacienda Interior" className="img-fluid rounded shadow" />
+            <img src="/gallery/14-fuente-jardin.png" alt="Patio interior de Hacienda Santa Filomena" className="img-fluid rounded shadow" />
           </div>
           <div className="story-text">
             <h2 className="section-title">Nuestra Esencia</h2>
             <p>Hacienda Santa Filomena no es solo un destino, es un legado vivo. Ubicada en las tierras altas de Venezuela, nuestra casa colonial ha guardado los secretos del mejor café por más de un siglo.</p>
             <p>Hoy, abrimos nuestras puertas para que vivas el confort de antaño con la hospitalidad de hoy.</p>
-            <a href="/la-hacienda" className="link-more">Leer nuestra historia <ArrowRight size={18} /></a>
+            <Link to="/la-hacienda" className="link-more">Leer nuestra historia <ArrowRight size={18} aria-hidden="true" /></Link>
           </div>
         </div>
       </section>
+
+      <PhotoCarousel photos={galleryPhotos} />
 
       {/* Services Grid */}
       <section className="services section-padding crema-bg">

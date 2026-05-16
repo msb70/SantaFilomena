@@ -1,4 +1,3 @@
-import React from 'react';
 import './LaHacienda.css';
 
 const LaHacienda = () => {
@@ -57,9 +56,7 @@ const LaHacienda = () => {
             </div>
             <div className="history-image">
               <div className="image-card accent">
-                <div className="placeholder-image">
-                  <span>Arquitectura & Paisaje</span>
-                </div>
+                <img src="/gallery/09-corredor-andino.png" alt="Corredor colonial de la hacienda con vista al valle" />
               </div>
             </div>
           </div>

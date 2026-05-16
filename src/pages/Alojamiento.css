@@ -1,5 +1,5 @@
 .alojamiento .page-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=1600');
+  background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.36)), url('/gallery/15-corredor-hacienda.png');
   background-size: cover;
   background-position: center;
   padding: 120px 0 80px;
@@ -108,6 +108,99 @@
   border-radius: 6px;
 }
 
+.booking-section {
+  scroll-margin-top: 90px;
+}
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.booking-copy p {
+  color: #5d554d;
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.payment-summary {
+  align-items: flex-start;
+  background: var(--blanco-limpio);
+  border-left: 4px solid var(--terracota-suave);
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  padding: 22px;
+}
+
+.payment-summary svg {
+  color: var(--verde-montana);
+  flex-shrink: 0;
+}
+
+.payment-summary strong,
+.payment-summary span,
+.payment-summary small {
+  display: block;
+}
+
+.payment-summary strong {
+  color: var(--cafe-colonial);
+  font-family: var(--font-accent);
+  font-size: 20px;
+}
+
+.payment-summary small {
+  color: #6b6258;
+  margin-top: 6px;
+}
+
+.reservation-form {
+  background: var(--blanco-limpio);
+  border-radius: 8px;
+  padding: 34px;
+}
+
+.reservation-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.reservation-form .form-group {
+  margin-bottom: 18px;
+}
+
+.reservation-form label {
+  color: var(--texto-oscuro);
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+  border: 1px solid #ded6cc;
+  border-radius: 8px;
+  font: inherit;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+.form-success {
+  background: #edf7ed;
+  border-left: 4px solid var(--verde-montana);
+  border-radius: 6px;
+  color: var(--verde-montana);
+  font-weight: 700;
+  margin-top: 18px;
+  padding: 12px 14px;
+}
+
 .amenities-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -130,5 +223,10 @@
   }
   .room-details {
     padding: 30px;
+  }
+
+  .booking-layout,
+  .reservation-form .form-row {
+    grid-template-columns: 1fr;
   }
 }

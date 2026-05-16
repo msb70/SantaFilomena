@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dossier de Eventos | Hacienda Santa Filomena</title>
+    <style>
+      :root {
+        --coffee: #5b3a29;
+        --green: #2f5b2f;
+        --cream: #f2e8d5;
+        --terra: #a65f3d;
+        --ink: #2c2c2c;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #fbf8f1;
+        color: var(--ink);
+        font-family: Inter, Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      .cover {
+        min-height: 86vh;
+        color: white;
+        display: grid;
+        align-items: end;
+        padding: 72px 8vw;
+        background:
+          linear-gradient(90deg, rgba(38, 23, 16, 0.84), rgba(38, 23, 16, 0.24)),
+          url('/gallery/10-patio-nocturno.png') center/cover;
+      }
+
+      .cover h1 {
+        font-family: Georgia, serif;
+        font-size: clamp(42px, 8vw, 92px);
+        line-height: .95;
+        max-width: 900px;
+        margin: 0 0 24px;
+      }
+
+      .cover p {
+        font-size: 22px;
+        max-width: 680px;
+      }
+
+      section {
+        padding: 64px 8vw;
+      }
+
+      h2 {
+        color: var(--coffee);
+        font-family: Georgia, serif;
+        font-size: 36px;
+        line-height: 1.1;
+        margin: 0 0 24px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 16px 40px rgba(55, 35, 22, .08);
+        padding: 28px;
+      }
+
+      .card strong {
+        color: var(--green);
+        display: block;
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      .band {
+        background: var(--cream);
+      }
+
+      .photo-grid {
+        display: grid;
+        grid-template-columns: 1.2fr .8fr;
+        gap: 22px;
+      }
+
+      .photo-grid img {
+        border-radius: 10px;
+        height: 360px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .checklist {
+        columns: 2;
+        list-style: none;
+        padding: 0;
+      }
+
+      .checklist li {
+        break-inside: avoid;
+        margin: 0 0 12px;
+      }
+
+      .checklist li::before {
+        color: var(--terra);
+        content: "✓ ";
+        font-weight: 800;
+      }
+
+      .footer {
+        background: var(--coffee);
+        color: white;
+        padding: 42px 8vw;
+      }
+
+      @media print {
+        .cover {
+          min-height: 70vh;
+        }
+
+        section {
+          page-break-inside: avoid;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .photo-grid,
+        .checklist {
+          columns: 1;
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="cover">
+        <div>
+          <h1>Eventos en Hacienda Santa Filomena</h1>
+          <p>Un escenario colonial en los Andes para reuniones, celebraciones y experiencias de campo con privacidad, carácter y hospitalidad.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Formatos recomendados</h2>
+        <div class="grid">
+          <article class="card">
+            <strong>Convenciones corporativas</strong>
+            <p>Jornadas de planificación, juntas directivas, capacitaciones y retiros ejecutivos con espacios tranquilos para trabajar.</p>
+          </article>
+          <article class="card">
+            <strong>Celebraciones sociales</strong>
+            <p>Bodas íntimas, aniversarios, bautizos, cumpleaños y reuniones familiares con estética colonial y jardines naturales.</p>
+          </article>
+          <article class="card">
+            <strong>Experiencias de integración</strong>
+            <p>Tours de café, caminatas, fogatas, almuerzos campestres y actividades para fortalecer equipos.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band">
+        <h2>Lo que incluye la propuesta base</h2>
+        <ul class="checklist">
+          <li>Recepción de invitados y coordinación operativa</li>
+          <li>Uso de áreas seleccionadas de la hacienda</li>
+          <li>Montaje básico según tipo de evento</li>
+          <li>Coffee break o estación de café</li>
+          <li>Opciones de almuerzo, cena o cóctel</li>
+          <li>Apoyo para proveedores externos</li>
+          <li>Rutas de acceso y recomendaciones logísticas</li>
+          <li>Opciones de alojamiento para invitados</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Ambientes</h2>
+        <div class="photo-grid">
+          <img src="/gallery/16-patio-central.png" alt="Patio central de la hacienda" />
+          <img src="/gallery/08-camino-empedrado.png" alt="Camino empedrado de la hacienda" />
+        </div>
+      </section>
+
+      <section class="band">
+        <h2>Información necesaria para cotizar</h2>
+        <div class="grid">
+          <article class="card"><strong>Fecha y horario</strong><p>Fecha tentativa, hora de inicio, hora de cierre y flexibilidad.</p></article>
+          <article class="card"><strong>Invitados</strong><p>Cantidad estimada de asistentes, adultos, niños y hospedaje requerido.</p></article>
+          <article class="card"><strong>Servicio</strong><p>Tipo de montaje, alimentos, bebidas, decoración, sonido y fotografía.</p></article>
+        </div>
+      </section>
+
+      <div class="footer">
+        <strong>Hacienda Santa Filomena</strong>
+        <p>Jají, Mérida, Venezuela · reservas@haciendasantafilomena.com · +58 412 345 6789</p>
+      </div>
+    </main>
+  </body>
+</html>

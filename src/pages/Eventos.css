@@ -5,7 +5,7 @@
 .eventos-hero {
   height: 50vh;
   position: relative;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background: linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.36)), url('/gallery/10-patio-nocturno.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -128,11 +128,66 @@
   color: var(--blanco-limpio);
 }
 
+.event-quote-section {
+  scroll-margin-top: 90px;
+}
+
+.quote-layout {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.quote-intro {
+  margin: 0;
+  text-align: left;
+}
+
+.event-form {
+  background: var(--blanco-limpio);
+  border-radius: 8px;
+  padding: 34px;
+}
+
+.event-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.event-form .form-group {
+  margin-bottom: 18px;
+}
+
+.event-form label {
+  color: var(--texto-oscuro);
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.event-form input,
+.event-form select,
+.event-form textarea {
+  border: 1px solid #ded6cc;
+  border-radius: 8px;
+  font: inherit;
+  padding: 12px 14px;
+  width: 100%;
+}
+
 @media (max-width: 992px) {
   .events-grid {
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
+  }
+
+  .quote-layout,
+  .event-form .form-row {
+    grid-template-columns: 1fr;
   }
 }
 

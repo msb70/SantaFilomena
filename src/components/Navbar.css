@@ -8,11 +8,17 @@
   align-items: center;
   z-index: 1000;
   transition: var(--transition-smooth);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(91, 58, 41, 0.1);
+  box-shadow: 0 8px 28px rgba(30, 22, 16, 0.08);
 }
 
 .navbar.scrolled {
   height: 70px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -52,19 +58,18 @@
 
 .nav-link {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--texto-oscuro);
-  opacity: 0.8;
 }
 
 .nav-link:hover {
   color: var(--verde-montana);
-  opacity: 1;
 }
 
 .mobile-toggle {
   display: none;
   color: var(--cafe-colonial);
+  padding: 8px;
 }
 
 .mobile-menu {

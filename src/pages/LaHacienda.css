@@ -109,19 +109,6 @@
   display: block;
 }
 
-.placeholder-image {
-  width: 100%;
-  height: 400px;
-  background: linear-gradient(135deg, var(--cafe-colonial), var(--terracota-suave));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blanco-limpio);
-  font-family: var(--font-accent);
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
 .values-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

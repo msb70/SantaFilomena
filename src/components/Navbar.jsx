@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Calendar } from 'lucide-react';
 import './Navbar.css';
@@ -39,15 +39,21 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Link to="/reservar" className="btn-primary nav-cta">
-            <Calendar size={18} />
+          <Link to="/contacto" className="btn-primary nav-cta">
+            <Calendar size={18} aria-hidden="true" />
             <span>Reservar</span>
           </Link>
         </div>
 
         {/* Mobile Toggle */}
-        <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        <button
+          type="button"
+          className="mobile-toggle"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'}
+          aria-expanded={isOpen}
+        >
+          {isOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
         </button>
       </div>
 
@@ -63,8 +69,8 @@ const Navbar = () => {
             {link.name}
           </Link>
         ))}
-        <Link to="/reservar" className="btn-primary mobile-cta" onClick={() => setIsOpen(false)}>
-          <Calendar size={18} />
+        <Link to="/contacto" className="btn-primary mobile-cta" onClick={() => setIsOpen(false)}>
+          <Calendar size={18} aria-hidden="true" />
           <span>Reservar</span>
         </Link>
       </div>
